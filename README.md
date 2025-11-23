@@ -34,3 +34,16 @@ Parses messy Goods Description text, standardizes units, computes landed costs, 
 
 ## Repo structure
 
+Project architecture
+
+flowchart LR
+  A[Raw Excel: trade_data_2017_2025.xlsx]
+  A --> B[run_pipeline.py]
+  B --> C[src/cleaning/clean_base.py]
+  B --> D[src/parsing/parse_goods_description.py]
+  B --> E[src/feature_engineering/features.py]
+  E --> F[data/processed/trade_cleaned.csv]
+  F --> G[src/db/load_to_db.py]
+  G --> H[SQLite: trade.db]
+  F --> I[Power BI (Text/CSV import) => Dashboards]
+  H --> J[SQL analysis (macro_trends, pareto_hsn, supplier_status)]
