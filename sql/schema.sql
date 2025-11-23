@@ -1,0 +1,27 @@
+-- Example schema for shipments table (Postgres)
+CREATE TABLE IF NOT EXISTS shipments (
+    id SERIAL PRIMARY KEY,
+    date_of_shipment DATE,
+    year INTEGER,
+    month INTEGER,
+    quarter TEXT,
+    hsn_code TEXT,
+    hsn_description TEXT,
+    goods_description TEXT,
+    quantity NUMERIC,
+    unit TEXT,
+    unit_standardized TEXT,
+    unit_price_inr NUMERIC,
+    total_value_inr NUMERIC,
+    duty_paid_inr NUMERIC,
+    grand_total_inr NUMERIC,
+    landed_cost_per_unit NUMERIC,
+    supplier_name TEXT,
+    supplier_address TEXT,
+    model_token TEXT,
+    capacity_spec TEXT,
+    embedded_quantity INTEGER,
+    unit_price_usd NUMERIC,
+    category TEXT,
+    sub_category TEXT
+);

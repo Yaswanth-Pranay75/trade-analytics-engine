@@ -1,0 +1,15 @@
+﻿# Python / VSCode
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+
+# Data / outputs (optional — do not push raw data or generated DB)
+data/raw/
+data/processed/
+trade.db
+siddharth_trade_submission.zip
+
+# OS files
+Thumbs.db
+.DS_Store
